@@ -67,4 +67,3 @@ A Homebrew game for the 3DS about cooking in a limited time.
 ## Instalation
 Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
 Files are available in .3dsx formats for now
-###### Well actually not yet...
