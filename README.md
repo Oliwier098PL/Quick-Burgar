@@ -42,10 +42,26 @@ A Homebrew game for the 3DS about cooking in a limited time.
 ##### Depends if the Patty Shelf is opened
 
 <img width="30" height="76" alt="image" align="left" src="https://github.com/user-attachments/assets/525ac230-86d1-45d2-8979-2ddd5a3d6194" />
- - Top Bun
+- Top Bun
 <br/><br/>
- - Bottom Bun
+- Bottom Bun
 
+<p align="center">
+  <img width="105" height="46" alt="image" src="https://github.com/user-attachments/assets/68035def-3286-458c-9841-12115e0d217c" />
+</p>
+
+- R - Place a lid
+- A / L - Take a cup
+##### Depends of the current state of the cup
+
+<img width="92" height="86" alt="image" align="left" src="https://github.com/user-attachments/assets/160e4111-49fc-4dae-bf86-cd0d0510381f" />
+- X - Pour Cokend
+<br/>
+- Y - Pour Funtum
+<br/>
+- B - Pour Spiatrus
+<br/>
+- A - Pour Ice Tea
 
 ## Instalation
 Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
