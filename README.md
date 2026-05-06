@@ -55,7 +55,7 @@ A Homebrew game for the 3DS about cooking in a limited time.
 ##### Depends of the current state of the cup
 <br/>
 
-<img width="92" height="86" alt="image" align="left" src="https://github.com/user-attachments/assets/160e4111-49fc-4dae-bf86-cd0d0510381f" />
+<img width="92" height="86" alt="image" align="left" src="https://github.com/user-attachments/assets/47d45aa3-96e9-4886-9665-2a6b069faad9" />
 - X - Pour Cokend
 <br/>
 - Y - Pour Funtum
