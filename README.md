@@ -53,6 +53,7 @@ A Homebrew game for the 3DS about cooking in a limited time.
 - R - Place a lid
 - A / L - Take a cup
 ##### Depends of the current state of the cup
+<br/>
 
 <img width="92" height="86" alt="image" align="left" src="https://github.com/user-attachments/assets/160e4111-49fc-4dae-bf86-cd0d0510381f" />
 - X - Pour Cokend
