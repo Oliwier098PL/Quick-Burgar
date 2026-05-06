@@ -29,6 +29,24 @@ A Homebrew game for the 3DS about cooking in a limited time.
 - X - Put the potato in oil / Take out the fries from the oil
 - Y - Package fries
 
+<p align="center">
+  <img width="145" height="50" alt="image" src="https://github.com/user-attachments/assets/b9b7e54f-9e9f-405f-b25d-ec9db131b8e6" />
+</p>
+
+- Y - Lettuce
+- L - Ketchup
+- R - Mustard
+
+- D-pad / Joystick Up - Opens Patty Shelf
+- A - Cheese / Patty
+##### Depends if the Patty Shelf is opened
+
+<img width="30" height="76" alt="image" align="left" src="https://github.com/user-attachments/assets/525ac230-86d1-45d2-8979-2ddd5a3d6194" />
+ - Top Bun
+<br/><br/>
+ - Bottom Bun
+
+
 ## Instalation
 Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
 Files are available in .3dsx formats for now
