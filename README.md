@@ -8,6 +8,18 @@ A Homebrew game for the 3DS about cooking in a limited time.
 > If it doesn't load after 2 minuts please list it as a bug
 
 ## Controls
+### In title menu
+- D-pad / Joystick - Select mode
+- X / Y / B - Choose the dificulty
+- A - Play the mode you selected
+
+### In Game
+- D-pad / Joystick - Move Around
+- B - Throw away things
+- D-pad / Joystick Down - Send the part of the order
+##### If you are making burgers you can't use B, to throw away things use D-pad / Joystick Down
+
+### In specified cook areas
 <p align="center">
   <img width="120" height="67" alt="image" src="https://github.com/user-attachments/assets/2e2af383-ab87-4b79-9552-e24d30ee4421" />
 </p>
