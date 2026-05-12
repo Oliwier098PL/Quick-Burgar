@@ -1,6 +1,8 @@
 # Quick Burgar <img width="177" height="116" alt="image" src="https://github.com/user-attachments/assets/75ee2e4d-bab7-4b99-921a-52ee463d4998" align="right"/>
 
-A Homebrew game for the 3DS about cooking in limited time.
+A Homebrew game for the 3DS about cooking in limited time. <br/>
+You work in a fast food restaurant, customers here are not patient. <br/>
+Complete orders in time otherwise you are gonna be FIRED!
 
 > [!NOTE]
 > The game takes quite a lot of time to load because of LÖVE Potion engine, please wait
