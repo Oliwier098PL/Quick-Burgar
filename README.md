@@ -82,3 +82,9 @@ Game framework - [LÖVE](https://love2d.org)
 
 ## Other sites
 Quick Burgar - [Itch.io](https://oliwier098pl.itch.io/quick-burgar)
+
+## Screenshots
+<img width="200" height="240" alt="Screenshot1" src="https://github.com/user-attachments/assets/adc6223a-96fb-4786-a0b8-6dfaefc36de7" />
+<img width="200" height="240" alt="Screenshot2" src="https://github.com/user-attachments/assets/d332e93a-2927-41f9-8862-890773383a9e" />
+<img width="200" height="240" alt="Screenshot3" src="https://github.com/user-attachments/assets/d938752e-61f4-4557-b5c2-587f7b3aabf1" />
+<img width="200" height="240" alt="Screenshot5" src="https://github.com/user-attachments/assets/3960ab81-a9cd-4f55-ac4f-b159bea82f24" />
