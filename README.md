@@ -1,11 +1,17 @@
 # Quick Burgar <img width="177" height="116" alt="image" src="https://github.com/user-attachments/assets/75ee2e4d-bab7-4b99-921a-52ee463d4998" align="right"/>
 
-A Homebrew game for the 3DS about cooking in a limited time.
+A Homebrew game for the 3DS about cooking in limited time.
 
 > [!NOTE]
-> The game takes quite a lot of time to load, please wait
+> The game takes quite a lot of time to load because of LÖVE Potion engine, please wait
 
 > If it doesn't load after 2 minuts please list it as a bug
+
+
+## Instalation
+Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
+Files are available in .3dsx formats for now
+
 
 ## Controls
 ### In title menu
@@ -64,6 +70,13 @@ A Homebrew game for the 3DS about cooking in a limited time.
 <br/>
 - A - Pour Ice Tea
 
-## Instalation
-Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
-Files are available in .3dsx formats for now
+
+## Credits
+Quick Burgar - [Oliwier098PL](https://github.com/Oliwier098PL)
+
+Nintendo 3DS port of LÖVE - [LÖVE Potion](https://github.com/lovebrew/lovepotion) <br/>
+Nintendo 3DS to LÖVE compatibility layer - [nëst](https://github.com/lovebrew/nest) <br/>
+Game framework - [LÖVE](https://love2d.org)
+
+## Other sites
+Quick Burgar - [Itch.io](https://oliwier098pl.itch.io/quick-burgar)
