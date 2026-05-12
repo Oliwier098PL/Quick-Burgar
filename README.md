@@ -96,7 +96,7 @@ Nintendo 3DS to LÖVE compatibility layer - [nëst](https://github.com/lovebrew/
 Game framework - [LÖVE](https://love2d.org)
 
 ## Other sites
-Quick Burgar - [Itch.io](https://oliwier098pl.itch.io/quick-burgar)
+[![itch.io](https://img.shields.io/badge/itch.io-Quick_Burgar-fa5c5c?logo=itchdotio)](https://oliwier098pl.itch.io/quick-burgar)
 
 ## Screenshots
 <img width="200" height="240" alt="Screenshot1" src="https://github.com/user-attachments/assets/adc6223a-96fb-4786-a0b8-6dfaefc36de7" />
