@@ -14,6 +14,21 @@ Complete orders in time otherwise you are gonna be FIRED!
 Go to the [Release page](https://github.com/Oliwier098PL/Quick-Burgar/releases) and download the latest version.
 Files are available in .3dsx formats for now
 
+## Modes
+
+### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/55e60139-7de0-4e91-8b5a-d396ba0d6160" />
+Complete orders in limited time!
+
+<img width="118" height="56" alt="image" src="https://github.com/user-attachments/assets/7571258a-4212-41f0-a601-338a996efee6" />
+<img width="52" height="76" alt="image" align="left" src="https://github.com/user-attachments/assets/b3207b85-c13b-4202-b7cd-0ea685e12b3d" /> <br/>
+The time limit varies depending on the difficulty level and the number of orders completed. <br/><br/>
+
+
+### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/1a086f93-7f9f-4708-8fc0-e605f71e657b" /> <img width="121" height="13" alt="image" src="https://github.com/user-attachments/assets/7d198e80-673a-4799-be0b-1a753d32f921" />
+~~Complete orders without limited time!~~
+
+### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/fe7dc224-fc90-4a97-b083-526fc4c6bf76" /> <img width="121" height="13" alt="image" src="https://github.com/user-attachments/assets/7d198e80-673a-4799-be0b-1a753d32f921" />
+~~Learn how to complete orders!~~
 
 ## Controls
 ### In title menu
