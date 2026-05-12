@@ -12,10 +12,11 @@ quicktimerVisScale = 0
 progress = actualtimer / duration
 targetHeightVis = 205 * (1 - progress)
 scaleVis = 205 * progress
+Timeless = false
 
 -- Update timer each frame
 function TimeTimer.update(dt)
-    if Pause == false then
+    if Pause == false and Timeless == false then
         progress = actualtimer / duration
 
         targetHeightVis = 205 * (1 - progress)

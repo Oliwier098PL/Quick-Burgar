@@ -2,9 +2,12 @@ local Title = {}
 
 -- Load title screen assets and initialize variables
 function Title.load()
-    -- Load fonts and spritesheet
+    -- Load fonts, spritesheet and sound
     BoldPixelsFont   = love.graphics.newFont("assets/fonts/BoldPixels.ttf", 16)
     TitleSpritesheet = love.graphics.newImage("assets/textures/TitleSpritesheet.png")
+    SoundSelect      = love.audio.newSource("assets/sounds/Select.ogg", "static")
+    SoundSelectHigh  = love.audio.newSource("assets/sounds/Selecthigh.ogg", "static")
+    SoundSelectLow   = love.audio.newSource("assets/sounds/Selectlow.ogg", "static")
 
     -- Define quads for menu buttons
     Button1          = love.graphics.newQuad(177,0,   288,80,  TitleSpritesheet)
@@ -33,11 +36,11 @@ function Title.load()
     Button2YScale    = 0
     Button3YScale    = 0
     HardnessSelected = "Medium"
-    HardnessQuads = { Easy = Easy, Medium = Medium, Hard = Hard }
+    HardnessQuads    = { Easy = Easy, Medium = Medium, Hard = Hard }
     ButtonSelected   = 1
     ButtonScaleSpeed = 10
     
-    -- Logo animation variables
+    -- Logo animation and sound variables
     LogoY            = 29
     LogoTimer        = 0.25
     LogoUp           = true
@@ -47,9 +50,13 @@ function Title.load()
     LogoTimerSet     = 0.25
     LogoSpeed        = 10
 
+    NormalPitch      = 1.5
+    HigherPitch      = 2.0
+    LowerPitch       = 0.75
+
     -- Score tracking
-    Best             = { QuickTime = {Easy = 0, Medium = 0, Hard = 0}}
-    Points           = { QuickTime = {Easy = 0, Medium = 0, Hard = 0}}
+    Best             = { QuickTime = {Easy = 0, Medium = 0, Hard = 0}, TimelessTime = 0}
+    Points           = { QuickTime = {Easy = 0, Medium = 0, Hard = 0}, TimelessTime = 0}
 
     -- Load best scores from save file
     local data = love.filesystem.read("save.dat")
@@ -63,32 +70,50 @@ function Title.load()
         end
     end
 
-    Best = Best or { QuickTime = {Easy = 0, Medium = 0, Hard = 0}}
+    Best = Best or { QuickTime = {Easy = 0, Medium = 0, Hard = 0}, TimelessTime = 0}
     Best.QuickTime = Best.QuickTime or {Easy = 0, Medium = 0, Hard = 0}
+    Best.TimelessTime = Best.TimelessTime or 0
 end
 
 
 -- Handle button inputs for menu navigation
 function Title.buttons(button)
     if button == "a" and ButtonSelected == 1 then
+        SoundSelect:play()
         StartTransition("Game")
         TimeTimer.Reset()
+    elseif button == "a" and ButtonSelected == 2 then
+        SoundSelect:play()
+        StartTransition("Game")
+        Timeless = true
+
 
     elseif button == "dpdown" then
         if ButtonSelected ~= 3 then
             ButtonSelected = ButtonSelected + 1
+            SoundSelect:play()
         end
     elseif button == "dpup" then
         if ButtonSelected ~= 1 then
             ButtonSelected = ButtonSelected - 1
+            SoundSelect:play()
         end
     
-    elseif button == "x" then
+
+    elseif button == "x" and ButtonSelected == 1 then
         HardnessSelected = "Easy"
-    elseif button == "y" then
+        SoundSelectHigh:play()
+    elseif button == "y" and ButtonSelected == 1 then
         HardnessSelected = "Medium"
-    elseif button == "b" then
+        SoundSelectHigh:play()
+    elseif button == "b" and ButtonSelected == 1 then
         HardnessSelected = "Hard"
+        SoundSelectHigh:play()
+    
+
+    elseif button == "start" then
+        love.event.quit()
+
     end
 end
 
@@ -172,8 +197,8 @@ function Title.BottomDraw()
     love.graphics.setColor(154/255,0,13/255, 191/255)
     love.graphics.rectangle("fill", 16,7,   288,2)
     love.graphics.rectangle("fill", 16,231, 288,2)
-    love.graphics.rectangle("fill", 7,16,   2,288)
-    love.graphics.rectangle("fill", 311,16, 2,288)
+    love.graphics.rectangle("fill", 7,16,   2,208)
+    love.graphics.rectangle("fill", 311,16, 2,208)
     love.graphics.setColor(1,1,1, 1)
 
 
@@ -184,8 +209,11 @@ function Title.BottomDraw()
 
     -- Draw best score
     love.graphics.setColor(1,197/255,0)
-    local bestValue = (Best and Best.QuickTime and Best.QuickTime[HardnessSelected]) or 0
-    love.graphics.print("Best: "..bestValue, BoldPixelsFont, 123,55+23*Button1YScale, 0, 1,Button1YScale)
+    love.graphics.print("Best: "..Best.QuickTime[HardnessSelected], BoldPixelsFont, 123,55+23*Button1YScale, 0, 1,Button1YScale)
+    love.graphics.setColor(1,1,1)
+
+    love.graphics.setColor(208/255,18/255,1)
+    love.graphics.print("Best: "..Best.TimelessTime, BoldPixelsFont, 123,119+23*Button2YScale, 0, 1,Button2YScale)
     love.graphics.setColor(1,1,1)
 
     -- Draw selected difficulty
@@ -212,18 +240,39 @@ end
 
 -- Update best scores and save to file
 function Title.CalculateBest()
-    if Points.QuickTime[HardnessSelected] > Best.QuickTime[HardnessSelected] then
-        Best.QuickTime[HardnessSelected] = Points.QuickTime[HardnessSelected]
+    if Timeless == false then
+        if Points.QuickTime[HardnessSelected] > Best.QuickTime[HardnessSelected] then
+            Best.QuickTime[HardnessSelected] = Points.QuickTime[HardnessSelected]
 
-        -- Save best scores to file
-        local save_text = string.format(
-            "Best = { QuickTime = {Easy = %d, Medium = %d, Hard = %d}}",
-            Best.QuickTime.Easy,
-            Best.QuickTime.Medium,
-            Best.QuickTime.Hard
-        )
+            -- Save best scores to file
+            local save_text = string.format(
+                "Best = { QuickTime = {Easy = %d, Medium = %d, Hard = %d}, TimelessTime = %d}",
+                Best.QuickTime.Easy,
+                Best.QuickTime.Medium,
+                Best.QuickTime.Hard,
+                Best.TimelessTime
+            )
 
-        love.filesystem.write("save.dat", save_text)
+            love.filesystem.write("save.dat", save_text)
+        end
+    else
+        print("Points.TimelessTime =", Points.TimelessTime)
+        print("Best.TimelessTime =", Best.TimelessTime)
+
+        if Points.TimelessTime > Best.TimelessTime then
+            Best.TimelessTime = Points.TimelessTime
+
+            -- Save best scores to file
+            local save_text = string.format(
+                "Best = { QuickTime = {Easy = %d, Medium = %d, Hard = %d}, TimelessTime = %d}",
+                Best.QuickTime.Easy,
+                Best.QuickTime.Medium,
+                Best.QuickTime.Hard,
+                Best.TimelessTime
+            )
+
+            love.filesystem.write("save.dat", save_text)
+        end
     end
 end
 

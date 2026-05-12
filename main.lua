@@ -173,9 +173,11 @@ function love.gamepadpressed(joystick, button)
 			if Pause == false then
 				Pause = true
 				love.audio.pause()
+				SoundSelectLow:play()
 			else
 				Pause = false
 				SoundFrying:play()
+				SoundSelectLow:play()
 
 				if SodaState == "Pouring" then
 					SoundMashine:play()
@@ -189,6 +191,7 @@ function love.gamepadpressed(joystick, button)
 			Pause = false
 			TimeTimer.Reset()
 			Title.CalculateBest()
+			SoundSelect:play()
 			StartTransition("Title")
 		end
 
@@ -255,8 +258,14 @@ function love.draw(screen)
     		love.graphics.print(Points.QuickTime[HardnessSelected],SharpFont,         Three_Offset+192,118)
     		love.graphics.setColor(1, 1, 1)
 
-			if Points.QuickTime[HardnessSelected] > Best.QuickTime[HardnessSelected] then
-				love.graphics.draw(TitleSpritesheet,NewBestText,      Four_Offset+157,84)
+			if Timeless == false then
+				if Points.QuickTime[HardnessSelected] > Best.QuickTime[HardnessSelected] then
+					love.graphics.draw(TitleSpritesheet,NewBestText,      Four_Offset+157,84)
+				end
+			else
+				if Points.TimelessTime > Best.TimelessTime then
+					love.graphics.draw(TitleSpritesheet,NewBestText,      Four_Offset+157,84)
+				end
 			end
 		end
 	elseif Pause == true then
@@ -309,5 +318,5 @@ function ResetGame()
 	targetX = BottomUI.x
 
 	-- Reset points
-	Points = { QuickTime = { Easy = 0, Medium = 0, Hard = 0 } }
+	Points = { QuickTime = { Easy = 0, Medium = 0, Hard = 0 }, TimelessTime = 0 }
 end

@@ -126,7 +126,13 @@ function TopUI.draw(Animation, screen, TimeTimer)
 
     -- Draw points text
     love.graphics.setColor(0, 0, 0)
-    love.graphics.print(Points.QuickTime[HardnessSelected],SharpFont,         Three_Offset+329,18)
+
+    if Timeless == false then
+        love.graphics.print(Points.QuickTime[HardnessSelected],SharpFont,         Three_Offset+329,18)
+    else
+        love.graphics.print(Points.TimelessTime,               SharpFont,         Three_Offset+329,18)
+    end
+
     love.graphics.setColor(1, 1, 1)
 
 
@@ -245,7 +251,12 @@ function TopUI.CheckOrder()
     print(tostring(OrderFries), OrderBurger, OrderSoda)
     -- If order is complete (all items none/false), award points and generate new order
     if OrderFries == false and OrderBurger == "None" and OrderSoda == "None" then
-        Points.QuickTime[HardnessSelected] = Points.QuickTime[HardnessSelected] + 1
+
+        if Timeless == false then
+            Points.QuickTime[HardnessSelected] = Points.QuickTime[HardnessSelected] + 1
+        else
+            Points.TimelessTime = Points.TimelessTime + 1
+        end
         SoundNewOrder:play()
         TopUI.NewOrder()
     end
