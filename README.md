@@ -24,8 +24,8 @@ Complete orders in limited time!
 The time limit varies depending on the difficulty level and the number of orders completed. <br/><br/>
 
 
-### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/1a086f93-7f9f-4708-8fc0-e605f71e657b" /> <img width="121" height="13" alt="image" src="https://github.com/user-attachments/assets/7d198e80-673a-4799-be0b-1a753d32f921" />
-~~Complete orders without limited time!~~
+### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/1a086f93-7f9f-4708-8fc0-e605f71e657b" />
+Complete orders without limited time!
 
 ### <img width="262" height="24" alt="image" src="https://github.com/user-attachments/assets/fe7dc224-fc90-4a97-b083-526fc4c6bf76" /> <img width="121" height="13" alt="image" src="https://github.com/user-attachments/assets/7d198e80-673a-4799-be0b-1a753d32f921" />
 ~~Learn how to complete orders!~~
