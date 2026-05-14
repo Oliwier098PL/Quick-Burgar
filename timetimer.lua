@@ -34,8 +34,8 @@ function TimeTimer.update(dt)
     end
 end
 
--- Reset timer based on difficulty
-function TimeTimer.Reset()
+-- Initialize timer based on difficulty
+function TimeTimer.Init()
     if HardnessSelected == "Easy" then
         duration = 120
         MinusDuration = 3
@@ -50,6 +50,12 @@ function TimeTimer.Reset()
         MinDuration = 18
     end
 
+    actualtimer = duration
+    quicktimerSTOP = false
+end
+
+-- Reset the timer to the current duration (used when a new order is generated)
+function TimeTimer.Reset()
     actualtimer = duration
     quicktimerSTOP = false
 end

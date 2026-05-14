@@ -189,7 +189,7 @@ function love.gamepadpressed(joystick, button)
 		-- Handle unpause and return to title
 		if button == "a" and Pause == true then
 			Pause = false
-			TimeTimer.Reset()
+			TimeTimer.Init()
 			Title.CalculateBest()
 			SoundSelect:play()
 			StartTransition("Title")
@@ -319,4 +319,7 @@ function ResetGame()
 
 	-- Reset points
 	Points = { QuickTime = { Easy = 0, Medium = 0, Hard = 0 }, TimelessTime = 0 }
+
+	-- Reset timer
+	TimeTimer.Init()
 end

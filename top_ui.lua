@@ -257,7 +257,12 @@ function TopUI.CheckOrder()
         else
             Points.TimelessTime = Points.TimelessTime + 1
         end
+
+        if SoundNewOrder:isPlaying() then
+            SoundNewOrder:stop()
+        end
         SoundNewOrder:play()
+
         TopUI.NewOrder()
     end
 end

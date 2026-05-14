@@ -81,7 +81,7 @@ function Title.buttons(button)
     if button == "a" and ButtonSelected == 1 then
         SoundSelect:play()
         StartTransition("Game")
-        TimeTimer.Reset()
+        TimeTimer.Init()
     elseif button == "a" and ButtonSelected == 2 then
         SoundSelect:play()
         StartTransition("Game")
