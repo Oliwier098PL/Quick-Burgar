@@ -31,6 +31,9 @@ Complete orders without limited time!
 ~~Learn how to complete orders!~~
 
 ## Controls
+> [!NOTE]
+>  **Some of the controls are drawn into the game!**
+
 ### In title menu
 - D-pad / Joystick - Select mode
 - X / Y / B - Choose the dificulty
@@ -38,54 +41,44 @@ Complete orders without limited time!
 
 ### In Game
 - D-pad / Joystick - Move Around
-- B - Throw away things
 - D-pad / Joystick Down - Send the part of the order
-##### If you are making burgers you can't use B, to throw away things use D-pad / Joystick Down
+- B - Throw away things
+- Y - Pack things
+- D-pad up - Advanced Buttons (press)
+- R - Put
+- L - Take out
+
 
 ### In specified cook areas
 <p align="center">
   <img width="120" height="67" alt="image" src="https://github.com/user-attachments/assets/2e2af383-ab87-4b79-9552-e24d30ee4421" />
 </p>
 
-- A / L - Take a potato
-- R - Cut the potato
-- X - Put the potato in oil / Take out the fries from the oil
-- Y - Package fries
+- X - Take a potato
+- A - Cut
 
 <p align="center">
   <img width="145" height="50" alt="image" src="https://github.com/user-attachments/assets/b9b7e54f-9e9f-405f-b25d-ec9db131b8e6" />
 </p>
 
-- Y - Lettuce
-- L - Ketchup
 - R - Mustard
+- L - Ketchup
+- X - Lettuce
+- A - Cheese
+#### Advanced Buttons
+<img align="left" width="62" height="76" alt="image" src="https://github.com/user-attachments/assets/fadc477f-d4bb-43fe-8dcf-c1a8d59cc3cd" />
 
-- D-pad / Joystick Up - Opens Patty Shelf
-- A - Cheese / Patty
-##### Depends if the Patty Shelf is opened
-
-<img width="30" height="76" alt="image" align="left" src="https://github.com/user-attachments/assets/525ac230-86d1-45d2-8979-2ddd5a3d6194" />
-- Top Bun
-<br/><br/>
-- Bottom Bun
+   X - Top bun <br/>
+   A - Patty <br/>
+   B - Bottom bun
 
 <p align="center">
   <img width="105" height="46" alt="image" src="https://github.com/user-attachments/assets/68035def-3286-458c-9841-12115e0d217c" />
 </p>
 
-- R - Place a lid
-- A / L - Take a cup
-##### Depends of the current state of the cup
-<br/>
-
-<img width="92" height="86" alt="image" align="left" src="https://github.com/user-attachments/assets/47d45aa3-96e9-4886-9665-2a6b069faad9" />
-- X - Pour Cokend
-<br/>
-- Y - Pour Funtum
-<br/>
-- B - Pour Spiatrus
-<br/>
-- A - Pour Ice Tea
+- X - take a cup
+- R - Choose a soda (with each press a diffrent soda)
+- A - Pour the selected soda
 
 
 ## Credits
