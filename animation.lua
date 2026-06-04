@@ -40,12 +40,15 @@ function Animation.update(dt)
     -- Or call Animation.ResetNotLoopingAnim()
     if ThreeAnOnOnce == true then
         ThreeAnTimerOnce = ThreeAnTimerOnce + dt
+    end
+
+    if ThreeAnTimerOnce >= ThreeAnSpeedOnce then
+        ThreeAnTimerOnce = 0
 
         if ThreeAnFrameOnce < 3 then
-            if ThreeAnTimerOnce >= ThreeAnSpeedOnce then
-                ThreeAnTimerOnce = 0
-                ThreeAnFrameOnce = ThreeAnFrameOnce + 1
-            end
+            ThreeAnFrameOnce = ThreeAnFrameOnce + 1
+        else
+            ThreeAnOnOnce = false
         end
     end
 end
